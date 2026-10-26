@@ -141,6 +141,18 @@ input{font:inherit;padding:.9rem 1.1rem;border-radius:14px;border:1px solid var(
 .ok{display:none;padding:1rem;border-radius:14px;background:var(--bg-2);font-weight:500}
 @media(max-width:820px){.gift .inner{grid-template-columns:1fr}}
 
+/* widget perfit */
+.perfit-wrap{min-width:0}
+.perfit-wrap .fine{margin-top:.6rem}
+#optin-MlK12F1M{font-family:var(--font-body)!important}
+#optin-MlK12F1M *{box-sizing:border-box}
+#optin-MlK12F1M form,#optin-MlK12F1M [class*="container"],#optin-MlK12F1M [class*="wrapper"]{background:transparent!important;box-shadow:none!important;border:0!important;padding:0!important;max-width:none!important;width:100%!important}
+#optin-MlK12F1M h1,#optin-MlK12F1M h2,#optin-MlK12F1M h3,#optin-MlK12F1M [class*="title"]{font-family:var(--font-display)!important;font-weight:300!important;color:var(--fg)!important;font-size:1.35rem!important;line-height:1.2!important;margin:0 0 .4rem!important;text-align:left!important}
+#optin-MlK12F1M p,#optin-MlK12F1M [class*="subtitle"],#optin-MlK12F1M [class*="description"],#optin-MlK12F1M label{color:var(--muted)!important;font-size:.95rem!important;text-align:left!important}
+#optin-MlK12F1M input[type="text"],#optin-MlK12F1M input[type="email"]{font:inherit!important;font-size:1rem!important;padding:.9rem 1.1rem!important;border-radius:14px!important;border:1px solid var(--line)!important;background:var(--bg)!important;color:var(--fg)!important;width:100%!important;margin:0 0 .7rem!important;height:auto!important}
+#optin-MlK12F1M button,#optin-MlK12F1M input[type="submit"]{font:inherit!important;font-weight:600!important;font-size:.95rem!important;padding:.9rem 1.5rem!important;border-radius:999px!important;background:var(--accent)!important;color:var(--accent-fg)!important;border:0!important;width:100%!important;cursor:pointer;height:auto!important}
+#optin-MlK12F1M a[href*="perfit"],#optin-MlK12F1M a[href*="tiendanube"]{display:none!important}
+
 /* cierre + footer */
 .quote{text-align:center}
 .quote p{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.3rem);font-weight:300;font-style:italic;max-width:26ch;margin:0 auto}
@@ -345,13 +357,14 @@ footer a{text-decoration:none}
           <li><span class="dot"></span><span>Cupón de descuento en suplementos Zone Diet</span></li>
         </ul>
       </div>
-      <form id="form-regalo">
-        <input id="nombre" type="text" placeholder="Tu nombre" required>
-        <input id="email" type="email" placeholder="Tu email" required>
-        <button class="btn" type="submit" id="btn-suscribir">Quiero mis regalos</button>
+      <div class="perfit-wrap">
+        <!-- Optin Perfit - Inicio -->
+        <div id="optin-MlK12F1M" data-type="inline"></div>
+        <link rel="stylesheet" type="text/css" href="https://optin.myperfit.com/res/css/zonedietargent/MlK12F1M.css"/>
+        <script type="text/javascript" src="https://optin.myperfit.com/res/js/zonedietargent/MlK12F1M.js" charset="UTF-8"></script>
+        <!-- Optin Perfit - Fin -->
         <p class="fine">Sin spam. Podés darte de baja cuando quieras.</p>
-        <div class="ok" id="ok">¡Listo! Revisá tu email: ahí van tus regalos y el cupón.</div>
-      </form>
+      </div>
     </div>
   </div>
 </section>
@@ -378,13 +391,7 @@ footer a{text-decoration:none}
   <span>Hablá con Rita</span>
 </a>
 
-<script>
-document.getElementById('form-regalo').addEventListener('submit',function(e){
-  e.preventDefault();
-  document.getElementById('ok').style.display='block';
-  this.querySelector('button').disabled=true;
-});
-</script>
+
 
 </body>
 </html>
