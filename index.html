@@ -11,6 +11,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%235E8C7A'/%3E%3Ctext x='50' y='66' font-family='Georgia' font-size='52' text-anchor='middle' fill='white'%3EZ%3C/text%3E%3C/svg%3E">
 <style>img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Zone Diet Coaching</title>
+<link rel="canonical" href="https://www.zonedietcoaching.com.ar/">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Figtree:wght@400;500;600&display=swap">
 <style>
 /* Layout: aire blanco, bandas pastel muy suaves alternadas, una columna centrada de 1120px; la foto de Rita como único elemento con peso. */
@@ -393,5 +394,27 @@ footer a{text-decoration:none}
 
 
 
+<script>
+(function(){
+  var t0=Date.now();
+  function arm(f){
+    if(f.dataset.hp)return;f.dataset.hp="1";
+    var w=document.createElement("div");
+    w.style.cssText="position:absolute;left:-9999px;top:-9999px";
+    w.setAttribute("aria-hidden","true");
+    w.innerHTML="<label>No completar<input type='text' name='website' tabindex='-1' autocomplete='off'></label>";
+    f.appendChild(w);
+    f.addEventListener("submit",function(e){
+      var h=f.querySelector("input[name='website']");
+      if((h&&h.value!=="")||Date.now()-t0<3000){e.preventDefault();e.stopImmediatePropagation();}
+    },true);
+  }
+  var iv=setInterval(function(){
+    var f=document.querySelector("#optin-MlK12F1M form");
+    if(f){arm(f);clearInterval(iv);}
+  },400);
+  setTimeout(function(){clearInterval(iv)},15000);
+})();
+</script>
 </body>
 </html>
